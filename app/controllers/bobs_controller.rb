@@ -1,4 +1,15 @@
 class BobsController < ApplicationController
+  #GET	/posts/last
+  #GET	/posts/last.json
+  def main
+  	@bobs = Bob.last(1).reverse
+  	
+  	respond_to do |format|
+  	  format.html
+  	  format.json { render json: @bobs }
+  	end
+  end 
+  
   # GET /bobs
   # GET /bobs.json
   def index

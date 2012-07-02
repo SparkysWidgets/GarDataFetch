@@ -1,4 +1,5 @@
 GarDataFetch::Application.routes.draw do
+  get "bobs/main"
   resources :bobs
 
   # The priority is based upon order of creation:

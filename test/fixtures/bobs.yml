@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  time: 2012-06-30 22:06:00
+  temp1: MyString
+  temp2: MyString
+  humidity: MyString
+  ph: MyString
+  relay1status: MyString
+  relay2status: MyString
+  batteryv: MyString
+
+two:
+  time: 2012-06-30 22:06:00
+  temp1: MyString
+  temp2: MyString
+  humidity: MyString
+  ph: MyString
+  relay1status: MyString
+  relay2status: MyString
+  batteryv: MyString

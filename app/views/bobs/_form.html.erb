@@ -1,0 +1,49 @@
+<%= form_for(@bob) do |f| %>
+  <% if @bob.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bob.errors.count, "error") %> prohibited this bob from being saved:</h2>
+
+      <ul>
+      <% @bob.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.datetime_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :temp1 %><br />
+    <%= f.text_field :temp1 %>
+  </div>
+  <div class="field">
+    <%= f.label :temp2 %><br />
+    <%= f.text_field :temp2 %>
+  </div>
+  <div class="field">
+    <%= f.label :humidity %><br />
+    <%= f.text_field :humidity %>
+  </div>
+  <div class="field">
+    <%= f.label :ph %><br />
+    <%= f.text_field :ph %>
+  </div>
+  <div class="field">
+    <%= f.label :relay1status %><br />
+    <%= f.text_field :relay1status %>
+  </div>
+  <div class="field">
+    <%= f.label :relay2status %><br />
+    <%= f.text_field :relay2status %>
+  </div>
+  <div class="field">
+    <%= f.label :batteryv %><br />
+    <%= f.text_field :batteryv %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

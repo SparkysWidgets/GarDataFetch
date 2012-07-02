@@ -1,0 +1,83 @@
+
+<script type="text/javascript" charset="utf-8">
+				$(function() {
+					new Highcharts.Chart({
+						chart: {
+			 			renderTo: "chartspace"
+			 			},
+			 			title: {
+			 				text: "pH by time"
+			 			},
+			 			xAxis: {
+			 				type: "datetime"
+			 			},
+			 			yAxis: {
+			 				title: {
+			 					text: "pH"
+			 				}
+			 			},
+			 			series: [{
+			 				name: 'pH',
+			 				data: [<% @bobs.each do |bob| %>
+			 						<%= "#{bob.ph}," %>
+			 						<% end %>]
+			 			}]
+					});
+				});
+</script>
+				
+<div class="span9">
+          <div class="hero-unit">
+            <h1>GarData Fetch</h1>
+            <p>Web front end and control point for GarData and other arduino type controllers. Ease of Use, Graphing, and persistant data collection!</p>
+            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+            <div id="chartspace">
+            	
+            </div>
+          </div>
+
+    <div class="well">
+              
+           	<h2>Recent Data</h2>
+
+				<table class="table table-bordered table-striped">
+  					<tr>
+    					<th>Time</th>
+    					<th>Temp1</th>
+    					<th>Temp2</th>
+    					<th>Humidity</th>
+    					<th>Ph</th>
+    					<th>R1status</th>
+    					<th>R2status</th>
+    					<th>Batteryv</th>
+    					<th></th>
+    					<th></th>
+    					<th></th>
+  					</tr>
+
+					<% @bobs.each do |bob| %>
+  					<tr>
+    					<td><%= bob.time %></td>
+    					<td><%= bob.temp1 %></td>
+    					<td><%= bob.temp2 %></td>
+    					<td><%= bob.humidity %></td>
+    					<td><%= bob.ph %></td>
+    					<td><%= bob.relay1status %></td>
+    					<td><%= bob.relay2status %></td>
+    					<td><%= bob.batteryv %></td>
+    					<td><%= link_to 'Show', bob %></td>
+    					<td><%= link_to 'Edit', edit_bob_path(bob) %></td>
+    					<td><%= link_to 'Destroy', bob, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  					</tr>
+					<% end %>
+				</table>
+
+				<br />
+
+				<%= link_to 'New Bob', new_bob_path %>  
+				<%= will_paginate %> 
+            </div><!--/span-->
+
+        </div><!--/span-->
+
+

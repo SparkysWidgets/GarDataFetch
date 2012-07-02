@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Time:</b>
+  <%= @bob.time %>
+</p>
+
+<p>
+  <b>Temp1:</b>
+  <%= @bob.temp1 %>
+</p>
+
+<p>
+  <b>Temp2:</b>
+  <%= @bob.temp2 %>
+</p>
+
+<p>
+  <b>Humidity:</b>
+  <%= @bob.humidity %>
+</p>
+
+<p>
+  <b>Ph:</b>
+  <%= @bob.ph %>
+</p>
+
+<p>
+  <b>Relay1status:</b>
+  <%= @bob.relay1status %>
+</p>
+
+<p>
+  <b>Relay2status:</b>
+  <%= @bob.relay2status %>
+</p>
+
+<p>
+  <b>Batteryv:</b>
+  <%= @bob.batteryv %>
+</p>
+
+
+<%= link_to 'Edit', edit_bob_path(@bob) %> |
+<%= link_to 'Back', bobs_path %>

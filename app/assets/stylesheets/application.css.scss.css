@@ -1,0 +1,14 @@
+@import "bootswatch/slate/variables";
+@import "bootstrap";
+body { padding-top: 60px; }
+@import "bootstrap-responsive";
+@import "bootswatch/slate/bootswatch";
+
+//Import whatever else is needed
+//@import "base";
+
+#chartspace
+{
+width:560px;
+height:300px;
+}

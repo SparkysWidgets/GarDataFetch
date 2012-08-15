@@ -1,6 +1,13 @@
+<script>
+ $(document).ready(function() {
+ 		$("#aupdate").load("main.html.erb");
+ 	var refreshId = setInterval(100);
+ 	$.ajaxSetup({ cache: false });
+ 	});	
+</script>
 
 <% @bobs.each do |bob| %>				
-<div class="span9">
+<div class="span9" id="aupdate">
           <div class="hero-unit">
             <h1>Main Data Breakdown</h1>
             <p>Simple display of the last (most recent) record: <%= bob.time %></p>
